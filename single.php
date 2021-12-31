@@ -29,8 +29,12 @@ get_header();
 						<h4> <?php the_title() ?></h4>
 						<div class="post-single-info">
 							<ul class="list-inline">
-								<li><a href="author.html"><img src="assets/img/author/1.jpg" alt=""></a></li>
-								<li><a href="author.html">David Smith</a> </li>
+									<?php echo get_avatar( get_the_author_meta( 'ID' ), 100 ); ?>
+								<li><a href="author.html">
+									<?php
+										the_author_meta('display_name')
+									 ?>
+								</a> </li>
 								<li class="dot"></li>
 								<li>January 15, 2021</li>
 								<li class="dot"></li>
